@@ -25,5 +25,13 @@ h1{
     bottom: 13rem;
     right: 0;
   }
-
+  
+/* Calculation section button style */
+.btn-position{
+  margin-left: 6rem;
+}
+/* Footer style */
+.bottom{
+  margin-top: 7rem;
+}
   
