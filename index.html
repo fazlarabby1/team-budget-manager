@@ -47,7 +47,7 @@
                 <h3 class="card-title text-white">Lionel Messi</h3>
                 <p class="card-text text-white fw-bold"><span class="text-muted fw-normal">36 Goals</span> . <span
                     class="text-muted fw-normal">120 Assist</span></p>
-                <button onclick="disabled='true'" class="btn btn-primary px-5">Select</button>
+                <button onclick="display(this)" id="" class="btn btn-primary px-5">Select</button>
               </div>
             </div>
           </div>
@@ -59,7 +59,7 @@
                 </h3>
                 <p class="card-text text-white fw-bold"><span class="text-muted fw-normal">36 Goals</span> . <span
                     class="text-muted fw-normal">120 Assist</span></p>
-                <button onclick="disabled='true'" class="btn btn-primary px-5">Select</button>
+                <button onclick="display(this)" class="btn btn-primary px-5">Select</button>
               </div>
             </div>
           </div>
@@ -70,7 +70,7 @@
                 <h5 class="card-title text-white mt-2">Neymar Jr.</h5>
                 <p class="card-text text-white fw-bold"><span class="text-muted fw-normal">36 Goals</span> . <span
                     class="text-muted fw-normal">120 Assist</span></p>
-                <button onclick="disabled='true'" class="btn btn-primary px-5">Select</button>
+                <button onclick="display(this)" class="btn btn-primary px-5">Select</button>
               </div>
             </div>
           </div>
@@ -84,7 +84,7 @@
                 </h5>
                 <p class="card-text text-white fw-bold"><span class="text-muted fw-normal">36 Goals</span> . <span
                     class="text-muted fw-normal">120 Assist</span></p>
-                <button onclick="disabled='true'" class="btn btn-primary px-5">Select</button>
+                <button onclick="display(this)" class="btn btn-primary px-5">Select</button>
               </div>
             </div>
           </div>
@@ -97,7 +97,7 @@
                 </h5>
                 <p class="card-text text-white fw-bold"><span class="text-muted fw-normal">36 Goals</span> . <span
                     class="text-muted fw-normal">120 Assist</span></p>
-                <button onclick="disabled='true'" class="btn btn-primary px-5">Select</button>
+                <button onclick="display(this)" class="btn btn-primary px-5">Select</button>
               </div>
             </div>
           </div>
@@ -109,7 +109,7 @@
                 </h5>
                 <p class="card-text text-white fw-bold"><span class="text-muted fw-normal">36 Goals</span> . <span
                     class="text-muted fw-normal">120 Assist</span></p>
-                <button onclick="disabled='true'" class="btn btn-primary px-5">Select</button>
+                <button onclick="display(this)" class="btn btn-primary px-5">Select</button>
               </div>
             </div>
           </div>
@@ -123,7 +123,7 @@
                 </h5>
                 <p class="card-text text-white fw-bold"><span class="text-muted fw-normal">36 Goals</span> . <span
                     class="text-muted fw-normal">120 Assist</span></p>
-                <button onclick="disabled='true'" class="btn btn-primary px-5">Select</button>
+                <button onclick="display(this)" class="btn btn-primary px-5">Select</button>
               </div>
             </div>
           </div>
@@ -135,7 +135,7 @@
                 </h5>
                 <p class="card-text text-white fw-bold"><span class="text-muted fw-normal">36 Goals</span> . <span
                     class="text-muted fw-normal">120 Assist</span></p>
-                <button onclick="disabled='true'" class="btn btn-primary px-5">Select</button>
+                <button onclick="display(this)" class="btn btn-primary px-5">Select</button>
               </div>
             </div>
           </div>
@@ -147,7 +147,7 @@
                 </h5>
                 <p class="card-text text-white fw-bold"><span class="text-muted fw-normal">36 Goals</span> . <span
                     class="text-muted fw-normal">120 Assist</span></p>
-                <button onclick="disabled='true'" class="btn btn-primary px-5">Select</button>
+                <button onclick="display(this)" class="btn btn-primary px-5">Select</button>
               </div>
             </div>
           </div>
@@ -160,7 +160,7 @@
       <div class="card bg-black mt-5" style="width: 18rem; height: 21rem;">
         <div class="card-body">
           <h3 class="card-title text-center text-white fw-bold fs-3">Selected - V</h3>
-          <ol class="my-4 text-white">
+          <ol id="players-list" class="my-4 text-white">
 
           </ol>
         </div>
@@ -170,32 +170,36 @@
         <!-- Budget Calculation Section -->
         <div class="card-body">
           <h3 class="card-title text-white fw-bold text-center fs-2 mb-3">Budget</h3>
-          <p class="text-white">Per Player : <input class="ms-3" type="number" id=""></p>
-          <button class="btn btn-primary px-3 my-2 btn-position">Calculate</button>
-          <p class="text-white mt-3 mb-5">Plyer Expenses: <span class="ms-3"></span></p>
-          <p class="text-white">Manager : <input class="ms-3" type="number" id=""></p>
-          <p class="text-white">Coach : <input class="ms-4" type="number" name="" id=""></p>
-          <button class="btn btn-primary px-3 btn-position ">Calculate Total</button>
-          <p class="text-white text-star ms-5 mt-3">Total: <span></span></p>
+          <p class="text-white">Per Player : <input id="player-cost" class="ms-3" type="number"></p>
+          <button id="player-cost-button" class="btn btn-primary px-3 my-2 btn-position">Calculate</button>
+          <p class="text-white mt-3 fw-light">Plyer Expenses: <span class="ms-4 fw-semibold">$</span><span id="total-player-expense" class="fw-semibold"></span></p>
+          <p class="text-white" id="manager-c">Manager : <input id="manager-cost" class="ms-3" type="number"></p>
+          <p class="text-white ms-2">Coach : <input  id="coach-cost" class="ms-4" type="number" name=""></p>
+          <button id="total-cost-button" class="btn btn-primary px-3 btn-position ">Calculate Total</button>
+          <p class="text-white text-star ms-5 mt-3">Total: <span class="ms-5 fw-semibold text-warning">$</span><span id="total-amount" class="fw-semibold text-warning"></span></p>
         </div>
       </div>
 
     </div>
     <!-- Selected player list and calculation section end -->
-    <!-- Footer Section start -->
-    <footer>
-      <div class="bottom">
-        <hr class="text-white mt-5">
-        <p class="text-center text-white text-muted my-5">Copyright @ 2022 All Rights Reserved.</p>
-      </div>
-    </footer>
-    <!-- Footer Section end -->
   </main>
   <!-- main section end -->
+   <!-- Footer Section start -->
+   <footer>
+    <div class="bottom">
+      <hr class="text-white mt-5">
+      <p class="text-center text-white text-muted my-5">Copyright @ 2022 All Rights Reserved.</p>
+    </div>
+  </footer>
+  <!-- Footer Section end -->
   <!-- Bootstrap Script Link -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
+    
+    <!-- js scripts -->
+    <script src="js/utilities.js"></script>
+    
 </body>
 
 </html>
