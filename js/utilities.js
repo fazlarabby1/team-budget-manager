@@ -12,7 +12,7 @@ function display(element){
     }
     // If the array has 5 players then send the warning
     else{
-      alert('You already selected 5 player!!!');
+      alert('You have already selected 5 players!!!');
       return;
     }
     
