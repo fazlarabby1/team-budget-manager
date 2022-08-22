@@ -1,0 +1,29 @@
+/* Heading Title Style */
+h1{
+    color: #FF5E19;
+    padding-top: 8rem;
+}
+
+/* Header section image and position style */
+.header-text{
+    margin-left: -15rem;
+}
+.bottomleft {
+    margin-top: 6rem;
+    bottom: 5rem;
+    left: 6rem;
+  }
+
+.topright {
+    position: absolute;
+    top: 3rem;
+    right: 6rem;
+  }
+
+  .bottomright {
+    position: absolute;
+    bottom: 13rem;
+    right: 0;
+  }
+
+  
