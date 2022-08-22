@@ -9,5 +9,4 @@ function selectPlayers(listedPlayer){
           playersList.appendChild(li);
           }
     
-    
 }

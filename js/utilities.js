@@ -4,12 +4,15 @@ const players = [];
 // Function to get the players name and store the name in the empty array
 function display(element){
     event.target.disabled = true;
+
+    
     // Condition to check if the list has 5 players, if no then push
     if(players.length < 5){
       const playerName = element.parentNode.children[0].innerText;
     players.push(playerName);
     selectPlayers(players);
     }
+
     // If the array has 5 players then send the warning
     else{
       alert('You have already selected 5 players!!!');

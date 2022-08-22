@@ -1,17 +1,16 @@
 /* Heading Title Style */
 h1{
     color: #FF5E19;
-    padding-top: 8rem;
+    padding-top: 8vw;
 }
 
 /* Header section image and position style */
 .header-text{
-    margin-left: -15rem;
+    margin-right: 20rem;
 }
 .bottomleft {
-    margin-top: 6rem;
-    bottom: 5rem;
-    left: 6rem;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
   }
 
 .topright {
@@ -23,9 +22,10 @@ h1{
   .bottomright {
     position: absolute;
     bottom: 13rem;
-    right: 0;
+    left: 75rem;
+    top: 20rem;
   }
-  
+
 /* Calculation section button style */
 .btn-position{
   margin-left: 6rem;
@@ -34,4 +34,55 @@ h1{
 .bottom{
   margin-top: 7rem;
 }
-  
+
+
+/*------------------------------------------
+      Media query for responsive design
+  -----------------------------------------*/
+
+  /*------------------------------------------
+              For mobile device
+  -----------------------------------------*/
+@media only screen and (max-width: 480px){
+  .bottomleft{
+    margin-top: 0;
+    padding-top: 1rem;
+  }
+  .topright{
+    position: sticky;
+  }
+  .bottomright{
+    display: none;
+  }
+  .header-text{
+    margin-right: 0;
+    padding-bottom: 2rem;
+  }
+}
+
+  /*------------------------------------------
+              For Tablet device
+  -----------------------------------------*/
+@media only screen and (min-width: 481px) and (max-width: 768px){
+  .bottomright{
+    display: none;
+  }
+  .header-text{
+    margin-right: 0;
+    padding-bottom: 2rem;
+  }
+  .topright {
+    position:sticky;
+    top: 1rem;
+    right: 2rem;
+  }
+}
+
+  /*------------------------------------------
+              For Large device
+  -----------------------------------------*/
+@media only screen and (min-width: 769px) and (max-width: 1496px){
+  .bottomright{
+    position: sticky;
+  }
+}
